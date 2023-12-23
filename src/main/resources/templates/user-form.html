@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>User Form</title>
+</head>
+<body>
+<h2>User Form</h2>
+<form th:action="@{'/users/new'}" th:object="${user}" method="post">
+    <label>Username: <input type="text" th:field="*{username}" /></label><br/>
+    <label>Email: <input type="text" th:field="*{email}" /></label><br/>
+    <input type="submit" value="Save"/>
+</form>
+<a th:href="@{'/users'}">Cancel</a>
+</body>
+</html>
